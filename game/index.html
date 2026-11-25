@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Neon Skillet — Midnight Rush</title>
+<link rel="stylesheet" href="fonts.min.css">
+<link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="topbar">
+    <div id="logo">NEON SKILLET<small>MIDNIGHT RUSH</small></div>
+    <div id="phase-badge">DINNER RUSH</div>
+    <div id="timer-wrap">
+      <div id="timer-label">SHIFT TIME</div>
+      <div id="timer">3:00</div>
+    </div>
+    <div id="combo-badge"></div>
+    <div id="coins-wrap">
+      <div id="coins-label">TONIGHT'S TAKE</div>
+      <div id="coins">$0</div>
+    </div>
+    <button class="top-btn" id="mute-btn" type="button">SOUND ON</button>
+    <button class="top-btn" id="pause-btn" type="button">PAUSE</button>
+  </header>
+
+  <div id="main-row">
+    <div id="stage">
+      <canvas id="game-canvas"></canvas>
+      <div id="banner">
+        <div class="banner-title"></div>
+        <div class="banner-sub"></div>
+      </div>
+    </div>
+
+    <aside id="rail">
+      <div class="rail-title">ORDER BOARD <span>● LIVE</span></div>
+      <div id="tickets"></div>
+      <div id="rival-panel">
+        <div id="rival-head">
+          <div id="rival-name">RIVAL: <b>CHEF VEX</b></div>
+          <div id="vex-label">VEX IS QUIET</div>
+        </div>
+        <div id="vex-meter">
+          <div class="vex-seg"></div>
+          <div class="vex-seg"></div>
+          <div class="vex-seg"></div>
+          <div class="vex-seg"></div>
+          <div class="vex-seg"></div>
+        </div>
+        <div id="rival-note">Expired orders feed Vex's hype. Serve fast, keep the street yours.</div>
+      </div>
+      <div id="stats-row">
+        <div class="stat-chip" id="served-count">0 SERVED</div>
+        <div class="stat-chip" id="best-combo">BEST x0</div>
+      </div>
+    </aside>
+  </div>
+
+  <footer id="hintbar">
+    <span><b>WASD / ←↑↓→</b> move</span>
+    <span><b>CLICK</b> a station to walk &amp; use it</span>
+    <span><b>E</b> interact</span>
+    <span><b>Q</b> bin it</span>
+    <span><b>P</b> pause</span>
+    <span><b>M</b> mute</span>
+  </footer>
+</div>
+
+<div class="screen" id="title-screen">
+  <div class="screen-card">
+    <div class="screen-logo">NEON SKILLET</div>
+    <div class="screen-tag">MIDNIGHT RUSH · ONE 3-MINUTE SHIFT</div>
+    <p class="screen-blurb">You are Chef Nova, running the brightest kitchen on the street.
+      Tickets fly in, the grill never cools, and across the road Chef Vex is
+      waiting for you to slip. Chop, grill, fry, plate — and serve before the
+      patience runs out.</p>
+    <div class="howto">
+      <div class="howto-step"><b>1 · GRAB</b>Click a crate to take an ingredient. Your hands hold one thing.</div>
+      <div class="howto-step"><b>2 · PREP</b>Chop veg on the boards, grill on the grill, fry in the fryer. Watch the ring — food burns.</div>
+      <div class="howto-step"><b>3 · PLATE</b>Click a plate with an ingredient in hand to build the dish. A green glow means it matches a ticket.</div>
+      <div class="howto-step"><b>4 · SERVE</b>Carry the finished plate to the SERVE window. Fast serves pay tips and build your combo.</div>
+    </div>
+    <button class="btn-primary" id="start-btn" type="button">START SHIFT</button>
+    <div class="screen-controls"><b>WASD</b> move &nbsp;·&nbsp; <b>CLICK</b> stations &nbsp;·&nbsp; <b>E</b> interact &nbsp;·&nbsp; <b>Q</b> bin &nbsp;·&nbsp; <b>ENTER</b> start</div>
+  </div>
+</div>
+
+<div class="screen" id="pause-screen">
+  <div class="screen-card">
+    <div class="pause-title">PAUSED</div>
+    <p class="screen-blurb">The tickets are waiting. The grill is not getting any cooler.</p>
+    <div class="pause-btns">
+      <button class="btn-primary" id="resume-btn" type="button">RESUME</button>
+      <button class="btn-ghost" id="restart-btn" type="button">RESTART SHIFT</button>
+    </div>
+  </div>
+</div>
+
+<div class="screen" id="end-screen">
+  <div class="screen-card">
+    <div id="end-stars"></div>
+    <div id="end-title">A SOLID SHIFT</div>
+    <div id="end-coins">$0</div>
+    <div class="end-grid">
+      <div class="end-cell"><b id="end-served">0</b><span>SERVED</span></div>
+      <div class="end-cell"><b id="end-expired">0</b><span>EXPIRED</span></div>
+      <div class="end-cell"><b id="end-combo">x0</b><span>BEST COMBO</span></div>
+      <div class="end-cell"><b id="end-chopped">0</b><span>CHOPPED</span></div>
+      <div class="end-cell"><b id="end-cooked">0</b><span>COOKED</span></div>
+      <div class="end-cell"><b id="end-trashed">0</b><span>TRASHED</span></div>
+    </div>
+    <p id="end-vex"></p>
+    <button class="btn-primary" id="again-btn" type="button">ANOTHER SHIFT</button>
+  </div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
