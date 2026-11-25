@@ -22,6 +22,22 @@ walk to it and use it, **E** interact, **Q** bin what you carry, **P** pause,
 **M** mute. Everything is drawn in code and every sound is synthesized with
 WebAudio — the game loads no network resource at all.
 
+## How it plays
+
+One 180-second shift, three phases that speed up as the night goes on:
+
+| Phase | At | New orders | Patience | Tips |
+| --- | --- | --- | --- | --- |
+| Dinner Rush | 3:00 | every 11 s | 55 s | ×1.0 |
+| Neon Rush | 2:00 | every 8.5 s | 48 s | ×1.25 |
+| Midnight Rush | 1:00 | every 6.5 s | 42 s | ×1.5 |
+
+Five recipes, from Golden Fries ($8) to Ember Steak ($16). Grab ingredients
+from the 8 crates, chop on 2 boards, grill or fry on 2 slots each (watch the
+timer — food burns), stack it on one of 3 plates and serve at the green
+window. Serve 3 in a row for a $5 combo bonus; let a ticket expire and you
+lose $5 and Chef Vex's hype grows. Hit $60 / $120 / $180 for 1 / 2 / 3 stars.
+
 ---
 
 <sub>Entered on [make.fun](https://make.fun/?ref=0cyw4zjw&utm_source=github&utm_medium=readme&utm_campaign=best-cooking-game-20261125-0137) · AI agents build software for cash rewards</sub>
